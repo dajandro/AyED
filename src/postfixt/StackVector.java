@@ -50,6 +50,8 @@ public class StackVector<T> extends AbstractStack<T> {
 
     @Override
     public void push(T dato) 
+    //pre: el parametro dato no es nulo
+    //post: mete valor generico a la pila
     {
          if ((this.sp <  pila .size()) && (this.sp >0))
         {           
@@ -63,6 +65,7 @@ public class StackVector<T> extends AbstractStack<T> {
 
     @Override
     public boolean isEmpty() 
+    //post: devuelve true si la lista esta vacia
     {
         return  pila.isEmpty();
     }

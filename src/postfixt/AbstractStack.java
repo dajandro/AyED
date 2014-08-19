@@ -18,14 +18,16 @@ public abstract class AbstractStack<T> implements IStack<T> {
      * @return
      */
     @Override
-    public abstract T pop();    
+    public abstract T pop();
+    //post: método para sacar un valor generico a la pila
 
     /**
      *
      * @param t
      */
     @Override
-    public abstract void push(T t);
+    public abstract void push(T dato);
+    //post: método para meter un valor a la pila
 
     /**
      *
@@ -33,4 +35,5 @@ public abstract class AbstractStack<T> implements IStack<T> {
      */
     @Override
     public abstract boolean isEmpty();
+    //post: método para saber si el stack esta vacio
 }
