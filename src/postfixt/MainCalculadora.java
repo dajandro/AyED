@@ -10,7 +10,7 @@ package postfixt;
  *
  * @author Daniel Orozco <daniel.orozco>
  */
-public class MainPostfixT {
+public class MainCalculadora {
 
     /**
      * @param args the command line arguments
