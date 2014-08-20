@@ -1,9 +1,6 @@
 package postfixt;
 
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
 * Universidad Del Valle 
 * Pablo Díaz 13203

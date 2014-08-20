@@ -17,12 +17,18 @@ public class StackArrayList<T> extends AbstractStack<T> {
     private int sp;    
     private ArrayList<T> pila;
     
-    public StackArrayList()
+    public StackArrayList(T valor)
     {   
         // inica el ArrayList con un tamaño de 10
         pila = new ArrayList<T>();
         //sp = pila.size() - 1;
         sp = 0;
+        pila = new ArrayList<>(10);
+        for (int i = 0; i < 10; i++) {
+            pila.add(valor);
+        }
+        System.out.println("tama:"+pila.size());
+        sp = pila.size() - 1;
     }
     
     /**

@@ -13,7 +13,7 @@ package postfixt;
  */
 public abstract class AbstractStack<T> implements IStack<T> {
 
-    public double eval(String exp, AbstractStack stack)
+    public int eval(String exp, AbstractStack stack)
     {
         int i = 0;        
         //se recorre todo el string ingresado
@@ -79,7 +79,7 @@ public abstract class AbstractStack<T> implements IStack<T> {
                 }
             }//termina switch
         }//termina for
-        return (double) stack.pop();
+        return (int) stack.pop();
     }
     
     /**
