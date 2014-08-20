@@ -14,4 +14,8 @@ package postfixt;
  */
 public abstract class BaseStack<T> implements IStack<T> {
     
+    public double eval(String exp, BaseStack stack)
+    {
+        return 0;
+    }
 }
