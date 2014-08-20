@@ -21,7 +21,8 @@ public class StackArrayList<T> extends AbstractStack<T> {
     {   
         // inica el ArrayList con un tamaño de 10
         pila = new ArrayList<T>();
-        sp = pila.size() - 1;
+        //sp = pila.size() - 1;
+        sp = 0;
     }
     
     /**
@@ -31,17 +32,19 @@ public class StackArrayList<T> extends AbstractStack<T> {
     public StackArrayList(int t)
     {
         // inica el ArrayList con un tamaño t de parámetro
-        pila = new ArrayList<T>(t);
-        sp = pila.size() - 1;
+        pila = new ArrayList<T>(t);        
+        //sp = pila.size() - 1;
+        sp = 0;
     }
     
     @Override
     public T pop() {
         T dato = null;
         if ((this.sp < pila.size()) && (this.sp > 0))
-        {            
-            sp++;
-            dato = pila.get(sp);
+        {           
+            //dato = pila.get(sp);
+            dato = pila.remove(sp);            
+            sp--;
         }
         else
         {
@@ -56,7 +59,7 @@ public class StackArrayList<T> extends AbstractStack<T> {
         if ((this.sp < pila.size()) && (this.sp >0))
         {           
             pila.add(sp, t);
-            sp--;
+            sp++;
         }
         else
             System.out.println("Stack out of bounds");
