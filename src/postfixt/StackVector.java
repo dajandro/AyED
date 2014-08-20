@@ -19,13 +19,14 @@ public class StackVector<T> extends AbstractStack<T> {
     
     public StackVector()
     {
-        pila = new Vector(10);
+        pila = new Vector();
+        pila.setSize(10);
         sp = pila.size()-1;
     }
 
     public StackVector(int tamaño)
     {
-        pila = new Vector(tamaño);
+        pila = new Vector(tamaño);               
         sp =  pila .size()-1;
     }
     @Override
@@ -53,9 +54,10 @@ public class StackVector<T> extends AbstractStack<T> {
     //pre: el parametro dato no es nulo
     //post: mete valor generico a la pila
     {
-         if ((this.sp <  pila .size()) && (this.sp >0))
+        
+         if ((this.sp <  pila.size() ) && (this.sp >0))
         {           
-             pila .set(sp, dato);           
+            pila .set(sp, dato);           
             sp--;
         }
         else

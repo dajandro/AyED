@@ -40,7 +40,8 @@ public class MainCalculadora {
         stack = factory.getStack(opcion, opcion2);
         System.out.println("Ingrese expresión: ");       
         String exp = entrada_datos.next();
-        double res = stack.eval(exp,stack);        
+        System.out.println("before"+stack.isEmpty());
+        int res = stack.eval(exp,stack);        
         System.out.println("Resultado: " + res);
     }
     
