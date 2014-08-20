@@ -9,11 +9,13 @@ package postfixt;
 /**
  *
  * @author Pablo
+ * @param <T>
  */
 public class StackLista<T> extends AbstractStack<T> {
     
     private int sp;
-    private AbstractList _pila;
+    private AbstractList<T> _pila;
+    
     
     public StackLista(int tipoLista)
     {
@@ -22,6 +24,10 @@ public class StackLista<T> extends AbstractStack<T> {
         //si se quiere cambiar el tipo, basta con cambiar este tipo, las entradas 
         //y el parametro del bubblesort
          _pila = _nFactory.getLista(tipoLista, 1);
+         for (int i = 0; i < 100; i++)
+            _pila.Agregar(null,i); 
+      
+         sp = _pila.getTamaño()-1;
         
     }
 
@@ -50,6 +56,7 @@ public class StackLista<T> extends AbstractStack<T> {
     public void push(T dato) //pre: el parametro dato no es nulo
     //post: mete valor generico a la pila
     {
+         
          if ((this.sp < _pila.getTamaño()) && (this.sp >0))
         {           
              _pila.set(dato, sp);
