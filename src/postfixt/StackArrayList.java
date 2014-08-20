@@ -14,20 +14,14 @@ import java.util.ArrayList;
  */
 public class StackArrayList<T> extends AbstractStack<T> {
 
-    private int sp;    
+    private int sp;
     private ArrayList<T> pila;
     
     public StackArrayList(T valor)
-    {   
-        // inica el ArrayList con un tamaño de 10
-        pila = new ArrayList<T>();
-        //sp = pila.size() - 1;
-        sp = 0;
-        pila = new ArrayList<>(10);
-        for (int i = 0; i < 10; i++) {
-            pila.add(valor);
-        }
-        System.out.println("tama:"+pila.size());
+    {           
+        pila = new ArrayList(100);
+        for (int i = 0; i < 100; i++)
+            pila.add(valor);        
         sp = pila.size() - 1;
     }
     
@@ -38,19 +32,20 @@ public class StackArrayList<T> extends AbstractStack<T> {
     public StackArrayList(int t)
     {
         // inica el ArrayList con un tamaño t de parámetro
-        pila = new ArrayList<T>(t);        
-        //sp = pila.size() - 1;
-        sp = 0;
+        T valorT = null;
+        pila = new ArrayList(t);
+        for (int i = 0; i < t; i++)
+            pila.add(valorT);        
+        sp = 1;
     }
     
     @Override
     public T pop() {
         T dato = null;
-        if ((this.sp < pila.size()) && (this.sp > 0))
+        if ((this.sp <= pila.size()) && (this.sp > 0))
         {           
-            //dato = pila.get(sp);
+            sp--;            
             dato = pila.remove(sp);            
-            sp--;
         }
         else
         {
@@ -62,9 +57,9 @@ public class StackArrayList<T> extends AbstractStack<T> {
 
     @Override
     public void push(T t) {
-        if ((this.sp < pila.size()) && (this.sp >0))
-        {           
-            pila.add(sp, t);
+        if ((this.sp <= pila.size()) && (this.sp > 0))
+        {              
+            pila.add(t);
             sp++;
         }
         else

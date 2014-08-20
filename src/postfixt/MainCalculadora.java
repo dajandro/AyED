@@ -42,9 +42,7 @@ public class MainCalculadora {
         String exp = entrada_datos.next();
         double res = 0;
         res = stack.eval(exp,stack);        
-        System.out.println("before"+stack.isEmpty());
-        int res2 = stack.eval(exp,stack);        
-        System.out.println("Resultado: " + res2);
+        System.out.println("Resultado: " + res);
     }
     
 }

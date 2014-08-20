@@ -17,7 +17,7 @@ public class FactoryStack<T> {
         switch (entry)
         {
             case 1:
-                return (AbstractStack<T>) new StackArrayList<>(10);                                            
+                return (AbstractStack<T>) new StackArrayList<>(1);                                            
             case 2:
                 return (AbstractStack<T>) new StackVector<>();                    
             case 3:

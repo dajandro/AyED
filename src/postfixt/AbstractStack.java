@@ -37,7 +37,7 @@ public abstract class AbstractStack<T> implements IStack<T> {
                 case '+': 
                 {
                     int o1 = (int) stack.pop();
-                    int o2 = (int) stack.pop();                    
+                    int o2 = (int) stack.pop();
                     int n_res = o1 + o2;                                        
                     stack.push(n_res);
                     break;
