@@ -24,11 +24,11 @@ public class FactoryStack<T> {
                 switch (tipoLista)
                 {
                     case 1:
-                        //return (AbstractStack<T>) new StackLista<Integer>();                        
+                        return (AbstractStack<T>) new StackLista(tipoLista);
                     case 2:
-                        //return (AbstractStack<T>) new StackLista<String>();
+                        return (AbstractStack<T>) new StackLista(tipoLista);
                     case 3:
-                        //return (AbstractStack<T>) new StackLista<Double>();
+                        return (AbstractStack<T>) new StackLista(tipoLista);
                      default:
                         System.out.println("Ha escogido una opción incorrecta");
                         return null;
