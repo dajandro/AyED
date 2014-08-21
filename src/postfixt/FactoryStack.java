@@ -17,22 +17,12 @@ public class FactoryStack<T> {
         switch (entry)
         {
             case 1:
-                return (AbstractStack<T>) new StackArrayList<>(1);                                            
+                return new StackArrayList<>(1);                                            
             case 2:
-                return (AbstractStack<T>) new StackVector<>();                    
+                return new StackVector<>();                    
             case 3:
-                switch (tipoLista)
-                {
-                    case 1:
-                        return (AbstractStack<T>) new StackLista(tipoLista);
-                    case 2:
-                        return (AbstractStack<T>) new StackLista(tipoLista);
-                    case 3:
-                        return  (AbstractStack<T>) new StackLista(tipoLista);
-                     default:
-                        System.out.println("Ha escogido una opción incorrecta");
-                        return null;
-                }              
+                return new StackLista(tipoLista,0);
+                         
             default:
                 System.out.println("Ha escogido una opción incorrecta");
                 return null;

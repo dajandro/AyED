@@ -17,15 +17,15 @@ public class StackLista<T> extends AbstractStack<T> {
     private AbstractList<T> _pila;
     
     
-    public StackLista(int tipoLista)
+    public StackLista(int tipoLista,T valor)
     {
         FactoryListas _nFactory = new FactoryListas();
         //se implementa el tipo Integer
         //si se quiere cambiar el tipo, basta con cambiar este tipo, las entradas 
         //y el parametro del bubblesort
-         _pila = _nFactory.getLista(tipoLista, 1);
+         _pila = _nFactory.getLista(tipoLista, 3);
          for (int i = 0; i < 100; i++)
-            _pila.Agregar(null,i); 
+            _pila.Agregar(valor,i); 
       
          sp = _pila.getTamaño()-1;
         

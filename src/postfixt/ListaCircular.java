@@ -46,7 +46,8 @@ public class ListaCircular<T> extends AbstractList<T>{
     //post: añade un elemento al final de la lista
     {
         AgregarPrincipio(valor);
-        System.out.println(Cola.getValor());
+        
+                
         Cola = (NodoCircular<T>) Cola.getSiguiente();
         
     }
