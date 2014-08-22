@@ -131,7 +131,7 @@ public class ListaDobleTest {
         int posicion = 1;
         ListaDoble instance = new ListaDoble();
         instance.AgregarPrincipio(valor);
-        instance.set(valor, posicion);
+        //instance.set(valor, posicion);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -144,8 +144,9 @@ public class ListaDobleTest {
         System.out.println("get");
         int pos = 0;
         ListaDoble instance = new ListaDoble();
-        Object expResult = null;
-        Object result = instance.get(pos);
+        int expResult = 0;
+        instance.AgregarPrincipio(pos);
+        Object result = instance.get(pos);        
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");

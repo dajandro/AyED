@@ -37,7 +37,7 @@ public class FactoryStack<T> {
             case 1:
                 return new StackArrayList<>(1);                                            
             case 2:
-                return new StackVector<>();                    
+                return new StackVector<>();                  
             case 3:
                 return new StackLista(tipoLista,0);
                          
