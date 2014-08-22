@@ -44,7 +44,7 @@ public class MainCalculadora {
         {
             factory = new FactoryStack();
             stack = factory.getStack(opcion, opcion2);
-            System.out.println("Ingrese expresión: ");
+            System.out.println("Leyendo expresión: ");
             String exp = archivo.LeerArchivo();
             double res = 0;
             res = stack.eval(exp,stack);        
@@ -60,7 +60,7 @@ public class MainCalculadora {
         {
             factoryP = new FactoryStack();            
             stack = factoryP.getStack(opcion, opcion2);
-            System.out.println("Ingrese expresión: ");
+            System.out.println("Leyendo expresión: ");
             String exp = archivo.LeerArchivo();
             double res = 0;
             res = stack.eval(exp,stack);        
