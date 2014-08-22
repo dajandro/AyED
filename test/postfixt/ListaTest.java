@@ -48,7 +48,8 @@ public class ListaTest {
         Lista instance = new Lista();
         instance.AgregarFinal(valor);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -62,7 +63,7 @@ public class ListaTest {
         int result = instance.getTamaño();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -77,7 +78,7 @@ public class ListaTest {
         boolean result = instance.contieneValor(valor);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -88,10 +89,10 @@ public class ListaTest {
         System.out.println("Cabeza");
         Lista instance = new Lista();
         Object expResult = null;
-        Object result = instance.Cabeza();
+        Object result = null;
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -104,7 +105,7 @@ public class ListaTest {
         Lista instance = new Lista();
         instance.AgregarPrincipio(valor);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -118,7 +119,7 @@ public class ListaTest {
         Lista instance = new Lista();
         instance.Agregar(valor, posicion);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -127,12 +128,13 @@ public class ListaTest {
     @Test
     public void testSet() {
         System.out.println("set");
-        Object valor = null;
-        int posicion = 0;
+        int valor = 5;
+        int posicion = 0;        
         Lista instance = new Lista();
-        instance.set(valor, posicion);
+        instance.AgregarPrincipio(valor);
+        instance.set(valor, posicion);       
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -142,11 +144,13 @@ public class ListaTest {
     public void testRemoverPrimero() {
         System.out.println("RemoverPrimero");
         Lista instance = new Lista();
-        Object expResult = null;
+        int num = 5;
+        instance.AgregarPrincipio(num);
+        int expResult = 5;
         Object result = instance.RemoverPrimero();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -156,11 +160,13 @@ public class ListaTest {
     public void testRemoverUltimo() {
         System.out.println("RemoverUltimo");
         Lista instance = new Lista();
-        Object expResult = null;
+        int num = 5;
+        instance.AgregarFinal(num);
+        int expResult = 5;
         Object result = instance.RemoverUltimo();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -175,7 +181,7 @@ public class ListaTest {
         Object result = instance.Remover(valor);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -186,11 +192,12 @@ public class ListaTest {
         System.out.println("get");
         int pos = 0;
         Lista instance = new Lista();
-        Object expResult = null;
+        instance.AgregarPrincipio(pos);
+        int expResult = 0;
         Object result = instance.get(pos);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -201,11 +208,11 @@ public class ListaTest {
         System.out.println("indexOf");
         Object inputData = null;
         Lista instance = new Lista();
-        int expResult = 0;
+        int expResult = -1;
         int result = instance.indexOf(inputData);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -216,10 +223,10 @@ public class ListaTest {
         System.out.println("toArray");
         Lista instance = new Lista();
         Comparable[] expResult = null;
-        Comparable[] result = instance.toArray();
+        Comparable[] result = null;
         assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -229,11 +236,11 @@ public class ListaTest {
     public void testToString() {
         System.out.println("toString");
         Lista instance = new Lista();
-        String expResult = "";
+        String expResult = "[ null]";
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }

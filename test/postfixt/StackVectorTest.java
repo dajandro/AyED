@@ -45,11 +45,12 @@ public class StackVectorTest {
     public void testPop() {
         System.out.println("pop");
         StackVector instance = new StackVector();
-        Object expResult = null;
+        int expResult = 5;
+        instance.push(expResult);
         Object result = instance.pop();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -62,7 +63,7 @@ public class StackVectorTest {
         StackVector instance = new StackVector();
         instance.push(dato);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -76,7 +77,7 @@ public class StackVectorTest {
         boolean result = instance.isEmpty();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }

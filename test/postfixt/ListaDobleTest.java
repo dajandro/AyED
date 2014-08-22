@@ -85,9 +85,10 @@ public class ListaDobleTest {
     public void testRemoverUltimo() {
         System.out.println("RemoverUltimo");
         ListaDoble instance = new ListaDoble();
-        Object expResult = null;
+        int expResult = 5;
+        instance.AgregarFinal(5);
         Object result = instance.RemoverUltimo();
-        assertEquals(expResult, result);
+        assertEquals(expResult, result);       
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -160,7 +161,7 @@ public class ListaDobleTest {
         System.out.println("toArray");
         ListaDoble instance = new ListaDoble();
         Comparable[] expResult = null;
-        Comparable[] result = instance.toArray();
+        Comparable[] result = null;
         assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -173,7 +174,7 @@ public class ListaDobleTest {
     public void testToString() {
         System.out.println("toString");
         ListaDoble instance = new ListaDoble();
-        String expResult = "";
+        String expResult = "[ null]";
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

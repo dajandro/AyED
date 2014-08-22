@@ -224,6 +224,6 @@ public class ListaDoble<T> extends AbstractList<T>{
     _sb.append(" null");
     _sb.append("]");
     return _sb.toString();
-    }
+    }   
 
 }

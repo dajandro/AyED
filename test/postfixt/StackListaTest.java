@@ -44,12 +44,12 @@ public class StackListaTest {
     @Test
     public void testPop() {
         System.out.println("pop");
-        StackLista instance = null;
+        StackLista instance = new StackLista(0, null);
         Object expResult = null;
         Object result = instance.pop();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -58,11 +58,11 @@ public class StackListaTest {
     @Test
     public void testPush() {
         System.out.println("push");
-        Object dato = null;
-        StackLista instance = null;
+        Integer dato = 5;
+        StackLista instance = new StackLista(0, null);
         instance.push(dato);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -71,12 +71,12 @@ public class StackListaTest {
     @Test
     public void testIsEmpty() {
         System.out.println("isEmpty");
-        StackLista instance = null;
+        StackLista instance = new StackLista(0, null);
         boolean expResult = false;
         boolean result = instance.isEmpty();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
