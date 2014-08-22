@@ -102,7 +102,7 @@ public class ListaCircular<T> extends AbstractList<T>{
            System.out.println("position out of bounds");
            System.out.println(pos);
            
-        }
+        }   
     
     NodoCircular<T> NodoActual = Cola;
     for (int i = 0; i<pos;i++)
