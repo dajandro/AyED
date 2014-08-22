@@ -12,6 +12,24 @@ package postfixt;
  */
 public class FactoryStack<T> {
     
+    //such that only one instance can ever exist
+    static boolean instance_flag=false; //true if 1 instance
+    
+    public FactoryStack() throws SingletonException
+    {
+        if (instance_flag)
+            throw new SingletonException("Solo se acepta un Stack");
+        else
+            instance_flag = true; //set flag for 1 instance
+        
+        System.out.println("Stack creado");
+    }
+    
+    public void finalize()
+    {
+        instance_flag = false; //clear if destroyed
+    }
+    
     public AbstractStack<T> getStack(int entry, int tipoLista)
     {
         switch (entry)

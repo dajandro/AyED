@@ -162,7 +162,7 @@ public class ListaDoble<T> extends AbstractList<T>{
             NodoActual = (NodoDoble<T>) NodoActual.getSiguiente();
         }//cierra for
         NodoActual.setValor(valor);
-    }
+    }    
    
     @Override
     public T get(int pos)

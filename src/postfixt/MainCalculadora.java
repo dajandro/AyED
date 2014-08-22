@@ -21,8 +21,8 @@ public class MainCalculadora {
         // TODO code application logic here
         Scanner entrada_datos  = new Scanner(System.in);
         int opcion = 0;
-        int opcion2 = 0;
-        FactoryStack factory = new FactoryStack();   
+        int opcion2 = 0;        
+        FactoryStack factory, factoryP;
         AbstractStack stack;
         System.out.println("Ingrese el tipo de stack");
         System.out.print("1. ArrayList\n");
@@ -37,12 +37,37 @@ public class MainCalculadora {
             System.out.print("3. Lista Circular\n");       
             opcion2 = entrada_datos.nextInt();
         }        
-        stack = factory.getStack(opcion, opcion2);
-        System.out.println("Ingrese expresión: ");       
-        String exp = entrada_datos.next();
-        double res = 0;
-        res = stack.eval(exp,stack);        
-        System.out.println("Resultado: " + res);
+        System.out.println("Creando stack...");
+        try 
+        {
+            factory = new FactoryStack();
+            stack = factory.getStack(opcion, opcion2);
+            System.out.println("Ingrese expresión: ");
+            String exp = entrada_datos.next();
+            double res = 0;
+            res = stack.eval(exp,stack);        
+            System.out.println("Resultado: " + res);
+        }
+        catch (SingletonException e)
+        {
+            System.out.println(e.getMessage());
+        }        
+        // Se trata de crear otro stack - debería fallar
+        System.out.println("Creando stack...");
+        try 
+        {
+            factoryP = new FactoryStack();            
+            stack = factoryP.getStack(opcion, opcion2);
+            System.out.println("Ingrese expresión: ");
+            String exp = entrada_datos.next();
+            double res = 0;
+            res = stack.eval(exp,stack);        
+            System.out.println("Resultado: " + res);
+        }
+        catch (SingletonException e)
+        {
+            System.out.println(e.getMessage());
+        }
     }
     
 }
