@@ -37,7 +37,7 @@ public class StackLista<T> extends AbstractStack<T> {
     */
     {
         T dato = null;
-        if ((this.sp <= _pila.getTamaño()) && (this.sp > 0))
+        if ((this.sp < _pila.getTamaño()) && (this.sp > 0))
         {            
             sp++;
             dato = (T)  _pila.get(sp);
@@ -56,7 +56,7 @@ public class StackLista<T> extends AbstractStack<T> {
     //post: mete valor generico a la pila
     {
          
-         if ((this.sp <= _pila.getTamaño()) && (this.sp >0))
+         if ((this.sp < _pila.getTamaño()) && (this.sp >0))
         {           
              _pila.set(dato, sp);            
             sp--;

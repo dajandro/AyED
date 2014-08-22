@@ -20,6 +20,8 @@ public class MainCalculadora {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada_datos  = new Scanner(System.in);
+        FileProject archivo = new FileProject();
+        
         int opcion = 0;
         int opcion2 = 0;        
         FactoryStack factory, factoryP;
@@ -43,7 +45,7 @@ public class MainCalculadora {
             factory = new FactoryStack();
             stack = factory.getStack(opcion, opcion2);
             System.out.println("Ingrese expresión: ");
-            String exp = entrada_datos.next();
+            String exp = archivo.LeerArchivo();
             double res = 0;
             res = stack.eval(exp,stack);        
             System.out.println("Resultado: " + res);
@@ -59,7 +61,7 @@ public class MainCalculadora {
             factoryP = new FactoryStack();            
             stack = factoryP.getStack(opcion, opcion2);
             System.out.println("Ingrese expresión: ");
-            String exp = entrada_datos.next();
+            String exp = archivo.LeerArchivo();
             double res = 0;
             res = stack.eval(exp,stack);        
             System.out.println("Resultado: " + res);

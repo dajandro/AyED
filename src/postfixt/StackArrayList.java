@@ -40,7 +40,8 @@ public class StackArrayList<T> extends AbstractStack<T> {
     }
     
     @Override
-    public T pop() {
+    public T pop() 
+    {
         T dato = null;
         if ((this.sp <= pila.size()) && (this.sp > 0))
         {           
